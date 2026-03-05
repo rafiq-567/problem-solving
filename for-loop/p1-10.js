@@ -16,9 +16,19 @@
 // }
 
 //problem-4
-for (let i=1; i<=50; i++){
-    if(i%2==1){
-        console.log(i)
+// for (let i=1; i<=50; i++){
+//     if(i%2==1){
+//         console.log(i)
+//     }
+// }
+
+//problem-5
+function sumToN(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++){
+        sum = sum+i;
     }
+    return sum
 }
+console.log(sumToN(5))
 
