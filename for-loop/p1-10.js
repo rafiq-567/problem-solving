@@ -23,12 +23,19 @@
 // }
 
 //problem-5
-function sumToN(n) {
-    let sum = 0;
-    for (let i = 1; i <= n; i++){
-        sum = sum+i;
-    }
-    return sum
-}
-console.log(sumToN(5))
+// function sumToN(n) {
+//     let sum = 0;
+//     for (let i = 1; i <= n; i++){
+//         sum = sum+i;
+//     }
+//     return sum
+// }
+// console.log(sumToN(5))
 
+//problem-6
+function printTable(n) {
+    for (let i = 1; i <= 10; i++) {
+console.log(n + " x " + i + " = " + (n * i));
+    }
+}
+printTable(2)
