@@ -33,9 +33,19 @@
 // console.log(sumToN(5))
 
 //problem-6
-function printTable(n) {
-    for (let i = 1; i <= 10; i++) {
-console.log(n + " x " + i + " = " + (n * i));
+// function printTable(n) {
+//     for (let i = 1; i <= 10; i++) {
+// console.log(n + " x " + i + " = " + (n * i));
+//     }
+// }
+// printTable(2)
+
+//problem-7
+let count = 0;
+for(i = 1; i <=100; i++){
+    
+    if(i%3==0){
+         count++;
     }
 }
-printTable(2)
+console.log(count)
