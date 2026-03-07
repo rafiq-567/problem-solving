@@ -41,11 +41,16 @@
 // printTable(2)
 
 //problem-7
-let count = 0;
-for(i = 1; i <=100; i++){
+// let count = 0;
+// for(i = 1; i <=100; i++){
     
-    if(i%3==0){
-         count++;
+//     if(i%3==0){
+//          count++;
+//     }
+// }
+// console.log(count)
+
+// problem-8
+ for(let i = 1; i <=10; i++){
+        console.log(i + " squared = " + (i * i))
     }
-}
-console.log(count)
