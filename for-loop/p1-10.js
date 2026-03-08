@@ -58,7 +58,9 @@
 
 // problem-9
 let n = 4;
-for(let i = 1; i <=n; i++){
-let line = '';
 
+for (let i = 1; i <= n; i++) {
+    let spaces = " ".repeat(n - i);
+    let hashes = "#".repeat(i);
+    console.log(spaces + hashes);
 }
