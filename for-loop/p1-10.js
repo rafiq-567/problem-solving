@@ -51,6 +51,14 @@
 // console.log(count)
 
 // problem-8
- for(let i = 1; i <=10; i++){
-        console.log(i + " squared = " + (i * i))
-    }
+//  for(let i = 1; i <=10; i++){
+//         console.log(i + " squared = " + (i * i))
+//     }
+
+
+// problem-9
+let n = 4;
+for(let i = 1; i <=n; i++){
+let line = '';
+
+}
