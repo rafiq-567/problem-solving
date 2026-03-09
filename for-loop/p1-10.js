@@ -57,10 +57,16 @@
 
 
 // problem-9
-let n = 4;
+// let n = 4;
 
-for (let i = 1; i <= n; i++) {
-    let spaces = " ".repeat(n - i);
-    let hashes = "#".repeat(i);
-    console.log(spaces + hashes);
+// for (let i = 1; i <= n; i++) {
+//     let spaces = " ".repeat(n - i);
+//     let hashes = "#".repeat(i);
+//     console.log(spaces + hashes);
+// }
+
+//problem-10
+function reverseString(str){
+    return str.split('').reverse().join()
 }
+console.log(reverseString('hello'))
