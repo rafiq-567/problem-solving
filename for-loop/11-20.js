@@ -37,14 +37,21 @@
 // console.log(uniqueArray)
 
 // problem-14
-function factorial(n) {
-  let result = 1;
+// function factorial(n) {
+//   let result = 1;
 
-  for (let i = 1; i <= n; i++) {
-    result *= i;
-  }
+//   for (let i = 1; i <= n; i++) {
+//     result *= i;
+//   }
 
-  return result;
+//   return result;
+// }
+
+// console.log(factorial(5));
+
+//problem-15
+function countDigits(num) {
+  return num.toString().length;
 }
 
-console.log(factorial(5));
+console.log(countDigits(12345));
