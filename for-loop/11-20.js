@@ -58,16 +58,30 @@
 
 
 //problem-16
-function reverseNumber(num) {
-  let reversed = 0;
+// function reverseNumber(num) {
+//   let reversed = 0;
 
-  while (num !== 0) {
-    let digit = num % 10;                 
-    reversed = reversed * 10 + digit;     
-    num = Math.floor(num / 10);           
+//   while (num !== 0) {
+//     let digit = num % 10;                 
+//     reversed = reversed * 10 + digit;     
+//     num = Math.floor(num / 10);           
+//   }
+
+//   return reversed;
+// }
+
+// console.log(reverseNumber(12345)); 
+
+
+// problem-17
+function sumOfDigits(num) {
+  let sum = 0;
+
+  for (; num > 0; num = Math.floor(num / 10)) {
+    sum += num % 10;
   }
 
-  return reversed;
+  return sum;
 }
 
-console.log(reverseNumber(12345)); 
+console.log(sumOfDigits(1234));
