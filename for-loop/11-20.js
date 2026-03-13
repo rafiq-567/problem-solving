@@ -74,14 +74,30 @@
 
 
 // problem-17
-function sumOfDigits(num) {
-  let sum = 0;
+// function sumOfDigits(num) {
+//   let sum = 0;
 
-  for (; num > 0; num = Math.floor(num / 10)) {
-    sum += num % 10;
+//   for (; num > 0; num = Math.floor(num / 10)) {
+//     sum += num % 10;
+//   }
+
+//   return sum;
+// }
+
+// console.log(sumOfDigits(1234));
+
+// problem-18
+function fibonacci(n) {
+  let first = 0;
+  let second = 1;
+
+  for (let i = 1; i <= n; i++) {
+    console.log(first);
+
+    let next = first + second;
+    first = second;
+    second = next;
   }
-
-  return sum;
 }
 
-console.log(sumOfDigits(1234));
+fibonacci(6);
