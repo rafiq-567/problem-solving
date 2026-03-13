@@ -87,17 +87,34 @@
 // console.log(sumOfDigits(1234));
 
 // problem-18
-function fibonacci(n) {
-  let first = 0;
-  let second = 1;
+// function fibonacci(n) {
+//   let first = 0;
+//   let second = 1;
 
-  for (let i = 1; i <= n; i++) {
-    console.log(first);
+//   for (let i = 1; i <= n; i++) {
+//     console.log(first);
 
-    let next = first + second;
-    first = second;
-    second = next;
+//     let next = first + second;
+//     first = second;
+//     second = next;
+//   }
+// }
+
+// fibonacci(6);
+
+// Problem-19
+function isPrime(num) {
+  if (num <= 1) return false;
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
   }
+
+  return true;
 }
 
-fibonacci(6);
+
+console.log(isPrime(7));
+console.log(isPrime(10));
