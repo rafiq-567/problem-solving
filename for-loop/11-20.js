@@ -103,18 +103,34 @@
 // fibonacci(6);
 
 // Problem-19
-function isPrime(num) {
-  if (num <= 1) return false;
+// function isPrime(num) {
+//   if (num <= 1) return false;
+
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+
+// console.log(isPrime(7));
+// console.log(isPrime(10));
+
+// problem-20
+for (let num = 2; num <= 100; num++) {
+  let isPrime = true;
 
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
-      return false;
+      isPrime = false;
+      break;
     }
   }
 
-  return true;
+  if (isPrime) {
+    console.log(num);
+  }
 }
-
-
-console.log(isPrime(7));
-console.log(isPrime(10));
