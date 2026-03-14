@@ -4,11 +4,19 @@
 // }
 
 // p-22
-let n = 5;
-let result = "";
+// let n = 5;
+// let result = "";
 
-for (let i = 1; i <= n; i++) {
-  result += "*";
+// for (let i = 1; i <= n; i++) {
+//   result += "*";
+// }
+
+// console.log(result);
+
+// p-23
+for (let i = 1; i <= 20; i++) {
+  if (i % 5 === 0) {
+    continue;
+  }
+  console.log(i);
 }
-
-console.log(result);
