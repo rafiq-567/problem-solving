@@ -38,17 +38,31 @@
 // console.log(findMax(numbers))
 
 //p-25
-function findMin(arr) {
-  let min = arr[0];
+// function findMin(arr) {
+//   let min = arr[0];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//       min = arr[i];
+//     }
+//   }
+
+//   return min;
+// }
+
+// const numbers = [5, 2, 9, 1, 7];
+// console.log("Minimum:", findMin(numbers));
+
+// p-26
+function arraySum(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
   }
 
-  return min;
+  return sum;
 }
 
 const numbers = [5, 2, 9, 1, 7];
-console.log("Minimum:", findMin(numbers));
+console.log("Sum:", arraySum(numbers));
