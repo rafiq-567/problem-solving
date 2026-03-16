@@ -22,17 +22,33 @@
 // }
 
 // p-24
-function findMax(arr) {
-  let max = arr[0];
+// function findMax(arr) {
+//   let max = arr[0];
+
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+
+//   return max;
+// }
+
+// const numbers = [10, 5, 8, 20, 15];
+// console.log(findMax(numbers))
+
+//p-25
+function findMin(arr) {
+  let min = arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
+    if (arr[i] < min) {
+      min = arr[i];
     }
   }
 
-  return max;
+  return min;
 }
 
-const numbers = [10, 5, 8, 20, 15];
-console.log(findMax(numbers))
+const numbers = [5, 2, 9, 1, 7];
+console.log("Minimum:", findMin(numbers));
