@@ -54,15 +54,32 @@
 // console.log("Minimum:", findMin(numbers));
 
 // p-26
-function arraySum(arr) {
-  let sum = 0;
+// function arraySum(arr) {
+//   let sum = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
 
-  return sum;
+//   return sum;
+// }
+
+// const numbers = [5, 2, 9, 1, 7];
+// console.log("Sum:", arraySum(numbers));
+
+// p-27
+const arr = [1, 2, 3, 4, 5, 6];
+
+let even = 0;
+let odd = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+        even++;
+    } else {
+        odd++;
+    }
 }
 
-const numbers = [5, 2, 9, 1, 7];
-console.log("Sum:", arraySum(numbers));
+console.log("Even:", even);
+console.log("Odd:", odd);
