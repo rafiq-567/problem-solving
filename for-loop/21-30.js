@@ -68,18 +68,28 @@
 // console.log("Sum:", arraySum(numbers));
 
 // p-27
-const arr = [1, 2, 3, 4, 5, 6];
+// const arr = [1, 2, 3, 4, 5, 6];
 
-let even = 0;
-let odd = 0;
+// let even = 0;
+// let odd = 0;
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-        even++;
-    } else {
-        odd++;
-    }
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//         even++;
+//     } else {
+//         odd++;
+//     }
+// }
+
+// console.log("Even:", even);
+// console.log("Odd:", odd);
+
+// p-28
+const arr = [1, 2, 3, 4, 5];
+const reversed = [];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
 }
 
-console.log("Even:", even);
-console.log("Odd:", odd);
+console.log(reversed);
