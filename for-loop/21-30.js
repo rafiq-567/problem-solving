@@ -95,18 +95,35 @@
 // console.log(reversed);
 
 // p-29
-const arr = [10, 5, 20, 8, 15];
+// const arr = [10, 5, 20, 8, 15];
 
-let largest = -Infinity;
-let secondLargest = -Infinity;
+// let largest = -Infinity;
+// let secondLargest = -Infinity;
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//         secondLargest = largest;
+//         largest = arr[i];
+//     } else if (arr[i] > secondLargest && arr[i] !== largest) {
+//         secondLargest = arr[i];
+//     }
+// }
+
+// console.log("Second Largest:", secondLargest);
+
+//p-30
+const arr = [1, 2, 2, 3, 1, 4, 2];
+
+const frequency = {};
 
 for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > largest) {
-        secondLargest = largest;
-        largest = arr[i];
-    } else if (arr[i] > secondLargest && arr[i] !== largest) {
-        secondLargest = arr[i];
+    let num = arr[i];
+
+    if (frequency[num]) {
+        frequency[num]++;
+    } else {
+        frequency[num] = 1;
     }
 }
 
-console.log("Second Largest:", secondLargest);
+console.log(frequency);
