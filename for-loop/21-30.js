@@ -85,11 +85,28 @@
 // console.log("Odd:", odd);
 
 // p-28
-const arr = [1, 2, 3, 4, 5];
-const reversed = [];
+// const arr = [1, 2, 3, 4, 5];
+// const reversed = [];
 
-for (let i = arr.length - 1; i >= 0; i--) {
-    reversed.push(arr[i]);
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     reversed.push(arr[i]);
+// }
+
+// console.log(reversed);
+
+// p-29
+const arr = [10, 5, 20, 8, 15];
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        secondLargest = largest;
+        largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+        secondLargest = arr[i];
+    }
 }
 
-console.log(reversed);
+console.log("Second Largest:", secondLargest);
