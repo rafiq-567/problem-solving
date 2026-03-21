@@ -112,18 +112,18 @@
 // console.log("Second Largest:", secondLargest);
 
 //p-30
-const arr = [1, 2, 2, 3, 1, 4, 2];
+// const arr = [1, 2, 2, 3, 1, 4, 2];
 
-const frequency = {};
+// const frequency = {};
 
-for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
+// for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
 
-    if (frequency[num]) {
-        frequency[num]++;
-    } else {
-        frequency[num] = 1;
-    }
-}
+//     if (frequency[num]) {
+//         frequency[num]++;
+//     } else {
+//         frequency[num] = 1;
+//     }
+// }
 
-console.log(frequency);
+// console.log(frequency);
