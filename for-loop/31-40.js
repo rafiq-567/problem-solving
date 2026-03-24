@@ -8,11 +8,24 @@
 // console.log(removeDuplicates(arr));
 
 // p-32
-function isSorted(arr) {
-  const asc = arr.every((val, i) => i === 0 || arr[i - 1] <= val);
-  const desc = arr.every((val, i) => i === 0 || arr[i - 1] >= val);
+// function isSorted(arr) {
+//   const asc = arr.every((val, i) => i === 0 || arr[i - 1] <= val);
+//   const desc = arr.every((val, i) => i === 0 || arr[i - 1] >= val);
 
-  return asc || desc;
+//   return asc || desc;
+// }
+// const arr = [ 1, 2, 3, 4, 2];
+// console.log(isSorted(arr));    
+
+// p-33
+function findMin(arr){
+  let min=arr[0]
+  for (let i = 1; i<arr.length; i++){
+    if(arr[i]<min){
+      min =arr[i]
+    }
+  }
+  return min
 }
-const arr = [ 1, 2, 3, 4, 2];
-console.log(isSorted(arr));    
+const numbers = [5, 2, 9, 1, 7]
+console.log(findMin(numbers))
