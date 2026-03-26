@@ -31,9 +31,27 @@
 // console.log(findMin(numbers))
 
 // p-34
-const string = (str)=>{
-  const reverse = str.split("").reverse().join("");
-  return reverse===str
+// const string = (str)=>{
+//   const reverse = str.split("").reverse().join("");
+//   return reverse===str
+// }
+// const result = string("madam")
+// console.log(result)
+
+// p-35
+function findMissing(arr, n) {
+    let expectedSum = (n * (n + 1)) / 2;
+    let actualSum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        actualSum += arr[i];
+    }
+
+    return expectedSum - actualSum;
 }
-const result = string("madam")
-console.log(result)
+
+
+const arr = [1, 2, 4, 5];
+const n = 5;
+
+console.log(findMissing(arr, n));
