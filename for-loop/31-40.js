@@ -39,19 +39,41 @@
 // console.log(result)
 
 // p-35
-function findMissing(arr, n) {
-    let expectedSum = (n * (n + 1)) / 2;
-    let actualSum = 0;
+// function findMissing(arr, n) {
+//     let expectedSum = (n * (n + 1)) / 2;
+//     let actualSum = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        actualSum += arr[i];
+//     for (let i = 0; i < arr.length; i++) {
+//         actualSum += arr[i];
+//     }
+
+//     return expectedSum - actualSum;
+// }
+
+
+// const arr = [1, 2, 4, 5];
+// const n = 5;
+
+// console.log(findMissing(arr, n));
+
+// p-36
+function intersection(arr1, arr2) {
+    const result = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                if (!result.includes(arr1[i])) {
+                    result.push(arr1[i]);
+                }
+            }
+        }
     }
 
-    return expectedSum - actualSum;
+    return result;
 }
 
+const arr1 = [1, 2, 3, 4];
+const arr2 = [3, 4, 5, 6];
 
-const arr = [1, 2, 4, 5];
-const n = 5;
-
-console.log(findMissing(arr, n));
+console.log(intersection(arr1, arr2));
