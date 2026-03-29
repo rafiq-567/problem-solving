@@ -57,23 +57,39 @@
 // console.log(findMissing(arr, n));
 
 // p-36
-function intersection(arr1, arr2) {
-    const result = [];
+// function intersection(arr1, arr2) {
+//     const result = [];
 
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr1[i] === arr2[j]) {
-                if (!result.includes(arr1[i])) {
-                    result.push(arr1[i]);
-                }
-            }
+//     for (let i = 0; i < arr1.length; i++) {
+//         for (let j = 0; j < arr2.length; j++) {
+//             if (arr1[i] === arr2[j]) {
+//                 if (!result.includes(arr1[i])) {
+//                     result.push(arr1[i]);
+//                 }
+//             }
+//         }
+//     }
+
+//     return result;
+// }
+
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [3, 4, 5, 6];
+
+// console.log(intersection(arr1, arr2));
+
+// p-37
+function countVowels(str) {
+    let count = 0;
+    let vowels = "aeiouAEIOU";
+
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            count++;
         }
     }
 
-    return result;
+    return count;
 }
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [3, 4, 5, 6];
-
-console.log(intersection(arr1, arr2));
+console.log(countVowels("Hello World"));
