@@ -79,17 +79,39 @@
 // console.log(intersection(arr1, arr2));
 
 // p-37
-function countVowels(str) {
-    let count = 0;
-    let vowels = "aeiouAEIOU";
+// function countVowels(str) {
+//     let count = 0;
+//     let vowels = "aeiouAEIOU";
 
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i])) {
-            count++;
-        }
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels.includes(str[i])) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(countVowels("Hello World"));
+
+// p-38
+function productExceptSelf(nums) {
+    const n = nums.length;
+    const result = new Array(n);
+
+    let left = 1;
+    for (let i = 0; i < n; i++) {
+        result[i] = left;
+        left *= nums[i];
     }
 
-    return count;
+    let right = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        result[i] *= right;
+        right *= nums[i];
+    }
+
+    return result;
 }
 
-console.log(countVowels("Hello World"));
+console.log(productExceptSelf([1, 2, 3, 4]));
