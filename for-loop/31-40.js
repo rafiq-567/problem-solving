@@ -95,23 +95,23 @@
 // console.log(countVowels("Hello World"));
 
 // p-38
-function productExceptSelf(nums) {
-    const n = nums.length;
-    const result = new Array(n);
+// function productExceptSelf(nums) {
+//     const n = nums.length;
+//     const result = new Array(n);
 
-    let left = 1;
-    for (let i = 0; i < n; i++) {
-        result[i] = left;
-        left *= nums[i];
-    }
+//     let left = 1;
+//     for (let i = 0; i < n; i++) {
+//         result[i] = left;
+//         left *= nums[i];
+//     }
 
-    let right = 1;
-    for (let i = n - 1; i >= 0; i--) {
-        result[i] *= right;
-        right *= nums[i];
-    }
+//     let right = 1;
+//     for (let i = n - 1; i >= 0; i--) {
+//         result[i] *= right;
+//         right *= nums[i];
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-console.log(productExceptSelf([1, 2, 3, 4]));
+// console.log(productExceptSelf([1, 2, 3, 4]));
