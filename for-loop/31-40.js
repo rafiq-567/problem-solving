@@ -115,3 +115,16 @@
 // }
 
 // console.log(productExceptSelf([1, 2, 3, 4]));
+
+// p-39
+function countOccurrences(str, char) {
+  let count = 0;
+  for (let c of str) {
+    if (c === char) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countOccurrences("messers mithila traders", "s"));
