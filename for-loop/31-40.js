@@ -130,19 +130,19 @@
 // console.log(countOccurrences("messers mithila traders", "s"));
 
 //p-40
-function findLongestWord(sentence) {
-  const words = sentence.split(' ');
+// function findLongestWord(sentence) {
+//   const words = sentence.split(' ');
 
-  let longest = "";
+//   let longest = "";
 
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > longest.length) {
-      longest = words[i];
-    }
-  }
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > longest.length) {
+//       longest = words[i];
+//     }
+//   }
 
-  return longest;
-}
+//   return longest;
+// }
 
-const result = findLongestWord("Coding in JavaScript is rewarding");
-console.log(result);
+// const result = findLongestWord("Coding in JavaScript is rewarding");
+// console.log(result);
