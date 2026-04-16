@@ -117,14 +117,32 @@
 // console.log(productExceptSelf([1, 2, 3, 4]));
 
 // p-39
-function countOccurrences(str, char) {
-  let count = 0;
-  for (let c of str) {
-    if (c === char) {
-      count++;
+// function countOccurrences(str, char) {
+//   let count = 0;
+//   for (let c of str) {
+//     if (c === char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countOccurrences("messers mithila traders", "s"));
+
+//p-40
+function findLongestWord(sentence) {
+  const words = sentence.split(' ');
+
+  let longest = "";
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
     }
   }
-  return count;
+
+  return longest;
 }
 
-console.log(countOccurrences("messers mithila traders", "s"));
+const result = findLongestWord("Coding in JavaScript is rewarding");
+console.log(result);
