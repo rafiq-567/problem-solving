@@ -32,4 +32,4 @@ function sumDigitsInString(str) {
 }
 
 const input = "abc123def45";
-console.log("Total Sum:", sumDigitsInString(input)); // Output: 15 (1+2+3+4+5)
+console.log("Total Sum:", sumDigitsInString(input));
