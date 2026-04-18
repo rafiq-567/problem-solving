@@ -44,17 +44,14 @@ function areAnagrams(str1, str2) {
 
   const charMap = {};
 
-  // First Loop: Count characters in the first string
   for (let i = 0; i < str1.length; i++) {
     const char = str1[i];
     charMap[char] = (charMap[char] || 0) + 1;
   }
 
-  // Second Loop: Subtract counts based on the second string
   for (let i = 0; i < str2.length; i++) {
     const char = str2[i];
 
-    // If the character doesn't exist in map or count is 0, it's not an anagram
     if (!charMap[char]) {
       return false;
     }
@@ -65,6 +62,5 @@ function areAnagrams(str1, str2) {
   return true;
 }
 
-// Example usage:
-console.log(areAnagrams("listen", "silent")); // Output: true
-console.log(areAnagrams("hello", "world"));   // Output: false
+console.log(areAnagrams("listen", "silent"));
+console.log(areAnagrams("hello", "world"));
