@@ -90,15 +90,13 @@
 // p-45
 function twoSum(nums, target) {
   for (let i = 0; i < nums.length; i++) {
-    // Start j at i + 1 so we don't pick the same element twice
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] === target) {
         return [i, j];
       }
     }
   }
-  return []; // Return empty if no pair is found
+  return [];
 }
 
-// Example:
-console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
+console.log(twoSum([2, 7, 11, 15], 9));
