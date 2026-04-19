@@ -36,31 +36,59 @@
 
 
 // p-43
-function areAnagrams(str1, str2) {
-  // If lengths differ, they cannot be anagrams
-  if (str1.length !== str2.length) {
-    return false;
-  }
+// function areAnagrams(str1, str2) {
+//   // If lengths differ, they cannot be anagrams
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
 
-  const charMap = {};
+//   const charMap = {};
 
-  for (let i = 0; i < str1.length; i++) {
-    const char = str1[i];
-    charMap[char] = (charMap[char] || 0) + 1;
-  }
+//   for (let i = 0; i < str1.length; i++) {
+//     const char = str1[i];
+//     charMap[char] = (charMap[char] || 0) + 1;
+//   }
 
-  for (let i = 0; i < str2.length; i++) {
-    const char = str2[i];
+//   for (let i = 0; i < str2.length; i++) {
+//     const char = str2[i];
 
-    if (!charMap[char]) {
-      return false;
-    }
+//     if (!charMap[char]) {
+//       return false;
+//     }
     
-    charMap[char]--;
+//     charMap[char]--;
+//   }
+
+//   return true;
+// }
+
+// console.log(areAnagrams("listen", "silent"));
+// console.log(areAnagrams("hello", "world"));
+
+// p-44
+function findFirstRepeatingIndex(arr) {
+  // We use a Set to store elements we've already encountered
+  const seen = new Set();
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+
+    // If the element is already in the Set, it's our first repeating element
+    if (seen.has(element)) {
+      return i; // Returning the index of the repeat
+    }
+
+    // Otherwise, add the element to the Set and keep moving
+    seen.add(element);
   }
 
-  return true;
+  // If the loop finishes without finding a repeat
+  return -1;
 }
 
-console.log(areAnagrams("listen", "silent"));
-console.log(areAnagrams("hello", "world"));
+// Example usage:
+const numbers = [10, 5, 3, 4, 3, 5, 6];
+const result = findFirstRepeatingIndex(numbers);
+
+console.log("Index of first repeating element:", result); 
+// Output: 4 (The number 3 at index 4 is the first element that was already seen)
