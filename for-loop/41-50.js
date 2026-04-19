@@ -67,28 +67,22 @@
 
 // p-44
 function findFirstRepeatingIndex(arr) {
-  // We use a Set to store elements we've already encountered
   const seen = new Set();
 
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
 
-    // If the element is already in the Set, it's our first repeating element
     if (seen.has(element)) {
-      return i; // Returning the index of the repeat
+      return i;
     }
 
-    // Otherwise, add the element to the Set and keep moving
     seen.add(element);
   }
 
-  // If the loop finishes without finding a repeat
   return -1;
 }
 
-// Example usage:
 const numbers = [10, 5, 3, 4, 3, 5, 6];
 const result = findFirstRepeatingIndex(numbers);
 
-console.log("Index of first repeating element:", result); 
-// Output: 4 (The number 3 at index 4 is the first element that was already seen)
+console.log("Index of first repeating element:", result);
