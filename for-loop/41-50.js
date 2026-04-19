@@ -66,23 +66,39 @@
 // console.log(areAnagrams("hello", "world"));
 
 // p-44
-function findFirstRepeatingIndex(arr) {
-  const seen = new Set();
+// function findFirstRepeatingIndex(arr) {
+//   const seen = new Set();
 
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
 
-    if (seen.has(element)) {
-      return i;
+//     if (seen.has(element)) {
+//       return i;
+//     }
+
+//     seen.add(element);
+//   }
+
+//   return -1;
+// }
+
+// const numbers = [10, 5, 3, 4, 3, 5, 6];
+// const result = findFirstRepeatingIndex(numbers);
+
+// console.log("Index of first repeating element:", result);
+
+// p-45
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    // Start j at i + 1 so we don't pick the same element twice
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
     }
-
-    seen.add(element);
   }
-
-  return -1;
+  return []; // Return empty if no pair is found
 }
 
-const numbers = [10, 5, 3, 4, 3, 5, 6];
-const result = findFirstRepeatingIndex(numbers);
-
-console.log("Index of first repeating element:", result);
+// Example:
+console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
