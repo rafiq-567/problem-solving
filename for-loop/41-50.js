@@ -103,22 +103,17 @@
 
 // p-46
 function maxSubArray(nums) {
-  // Initialize both with the first element
   let maxSoFar = nums[0];
   let currentMax = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
-    // Decision: Extend the existing subarray or start fresh?
     currentMax = Math.max(nums[i], currentMax + nums[i]);
 
-    // Keep track of the overall best sum we've seen
     maxSoFar = Math.max(maxSoFar, currentMax);
   }
 
   return maxSoFar;
 }
 
-// Example usage:
 const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-console.log("Maximum Subarray Sum:", maxSubArray(nums)); 
-// Output: 6 (The subarray is [4, -1, 2, 1])
+console.log("Maximum Subarray Sum:", maxSubArray(nums));
