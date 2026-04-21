@@ -88,15 +88,37 @@
 // console.log("Index of first repeating element:", result);
 
 // p-45
-function twoSum(nums, target) {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
-    }
+// function twoSum(nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i + 1; j < nums.length; j++) {
+//       if (nums[i] + nums[j] === target) {
+//         return [i, j];
+//       }
+//     }
+//   }
+//   return [];
+// }
+
+// console.log(twoSum([2, 7, 11, 15], 9));
+
+// p-46
+function maxSubArray(nums) {
+  // Initialize both with the first element
+  let maxSoFar = nums[0];
+  let currentMax = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    // Decision: Extend the existing subarray or start fresh?
+    currentMax = Math.max(nums[i], currentMax + nums[i]);
+
+    // Keep track of the overall best sum we've seen
+    maxSoFar = Math.max(maxSoFar, currentMax);
   }
-  return [];
+
+  return maxSoFar;
 }
 
-console.log(twoSum([2, 7, 11, 15], 9));
+// Example usage:
+const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+console.log("Maximum Subarray Sum:", maxSubArray(nums)); 
+// Output: 6 (The subarray is [4, -1, 2, 1])
