@@ -102,18 +102,48 @@
 // console.log(twoSum([2, 7, 11, 15], 9));
 
 // p-46
-function maxSubArray(nums) {
-  let maxSoFar = nums[0];
-  let currentMax = nums[0];
+// function maxSubArray(nums) {
+//   let maxSoFar = nums[0];
+//   let currentMax = nums[0];
 
-  for (let i = 1; i < nums.length; i++) {
-    currentMax = Math.max(nums[i], currentMax + nums[i]);
+//   for (let i = 1; i < nums.length; i++) {
+//     currentMax = Math.max(nums[i], currentMax + nums[i]);
 
-    maxSoFar = Math.max(maxSoFar, currentMax);
+//     maxSoFar = Math.max(maxSoFar, currentMax);
+//   }
+
+//   return maxSoFar;
+// }
+
+// const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// console.log("Maximum Subarray Sum:", maxSubArray(nums));
+
+// p-47
+function lengthOfLongestSubstring(s) {
+  let maxLength = 0;
+  let left = 0;
+  // A Map to store the last seen index of each character
+  const charMap = new Map();
+
+  for (let right = 0; right < s.length; right++) {
+    const char = s[right];
+
+    // If we've seen this character before and it's inside our current window
+    if (charMap.has(char) && charMap.get(char) >= left) {
+      // Move the left pointer to the right of the previous occurrence
+      left = charMap.get(char) + 1;
+    }
+
+    // Update the last seen index of the character
+    charMap.set(char, right);
+
+    // Calculate the window size and update maxLength if it's the new record
+    maxLength = Math.max(maxLength, right - left + 1);
   }
 
-  return maxSoFar;
+  return maxLength;
 }
 
-const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-console.log("Maximum Subarray Sum:", maxSubArray(nums));
+// Example usage:
+console.log(lengthOfLongestSubstring("abcabcbb")); // Output: 3 ("abc")
+console.log(lengthOfLongestSubstring("pwwkew"));    // Output: 3 ("wke")
