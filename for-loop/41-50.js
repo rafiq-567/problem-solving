@@ -119,25 +119,50 @@
 // console.log("Maximum Subarray Sum:", maxSubArray(nums));
 
 // p-47
-function lengthOfLongestSubstring(s) {
-  let maxLength = 0;
-  let left = 0;
-  const charMap = new Map();
+// function lengthOfLongestSubstring(s) {
+//   let maxLength = 0;
+//   let left = 0;
+//   const charMap = new Map();
 
-  for (let right = 0; right < s.length; right++) {
-    const char = s[right];
+//   for (let right = 0; right < s.length; right++) {
+//     const char = s[right];
 
-    if (charMap.has(char) && charMap.get(char) >= left) {
-      left = charMap.get(char) + 1;
+//     if (charMap.has(char) && charMap.get(char) >= left) {
+//       left = charMap.get(char) + 1;
+//     }
+
+//     charMap.set(char, right);
+
+//     maxLength = Math.max(maxLength, right - left + 1);
+//   }
+
+//   return maxLength;
+// }
+
+// console.log(lengthOfLongestSubstring("abcabcbb"));
+// console.log(lengthOfLongestSubstring("pwwkew"));
+
+// p-48
+function moveZeroes(nums) {
+  let insertPos = 0;
+
+  // প্রথম লুপ: সব নন-জিরো সংখ্যাগুলোকে সামনের দিকে নিয়ে আসা
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      nums[insertPos] = nums[i];
+      insertPos++;
     }
-
-    charMap.set(char, right);
-
-    maxLength = Math.max(maxLength, right - left + 1);
   }
 
-  return maxLength;
+  // দ্বিতীয় লুপ: বাকি খালি জায়গাগুলোতে ০ বসিয়ে দেওয়া
+  for (let i = insertPos; i < nums.length; i++) {
+    nums[i] = 0;
+  }
+
+  return nums;
 }
 
-console.log(lengthOfLongestSubstring("abcabcbb"));
-console.log(lengthOfLongestSubstring("pwwkew"));
+// Example usage:
+const arr = [0, 1, 0, 3, 12];
+console.log(moveZeroes(arr)); 
+// Output: [1, 3, 12, 0, 0]
