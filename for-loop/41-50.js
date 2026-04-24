@@ -146,7 +146,6 @@
 function moveZeroes(nums) {
   let insertPos = 0;
 
-  // প্রথম লুপ: সব নন-জিরো সংখ্যাগুলোকে সামনের দিকে নিয়ে আসা
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
       nums[insertPos] = nums[i];
@@ -154,7 +153,6 @@ function moveZeroes(nums) {
     }
   }
 
-  // দ্বিতীয় লুপ: বাকি খালি জায়গাগুলোতে ০ বসিয়ে দেওয়া
   for (let i = insertPos; i < nums.length; i++) {
     nums[i] = 0;
   }
@@ -162,7 +160,5 @@ function moveZeroes(nums) {
   return nums;
 }
 
-// Example usage:
 const arr = [0, 1, 0, 3, 12];
 console.log(moveZeroes(arr)); 
-// Output: [1, 3, 12, 0, 0]
