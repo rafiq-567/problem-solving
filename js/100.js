@@ -64,3 +64,9 @@ function convertToFahrenheit(celsius) {
     let fahrenheit = (celsius * 9/5) + 32;
     return fahrenheit;
 }
+
+const boilingPointC = 100;
+const boilingPointF = convertToFahrenheit(boilingPointC);
+console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
+console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
+console.log(convertToFahrenheit(25));
