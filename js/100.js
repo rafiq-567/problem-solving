@@ -60,13 +60,17 @@
 // console.log(calculate(10, 5, '/'));
 
 // 7
-function convertToFahrenheit(celsius) {
-    let fahrenheit = (celsius * 9/5) + 32;
-    return fahrenheit;
-}
+// function convertToFahrenheit(celsius) {
+//     let fahrenheit = (celsius * 9/5) + 32;
+//     return fahrenheit;
+// }
 
-const boilingPointC = 100;
-const boilingPointF = convertToFahrenheit(boilingPointC);
-console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
-console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
-console.log(convertToFahrenheit(25));
+// const boilingPointC = 100;
+// const boilingPointF = convertToFahrenheit(boilingPointC);
+// console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
+// console.log(`${boilingPointC}°C is equal to ${boilingPointF}°F`);
+// console.log(convertToFahrenheit(25));
+
+// 8
+let a = 5, b = 10;
+[a, b] = [b, a];
