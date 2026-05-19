@@ -72,5 +72,16 @@
 // console.log(convertToFahrenheit(25));
 
 // 8
-let a = 5, b = 10;
-[a, b] = [b, a];
+// let a = 5, b = 10;
+// [a, b] = [b, a];
+
+// 9
+for(let i = 0; i <= 100; i++){
+    if(i%2===0){
+        console.log('positive number: ' , i);
+    }
+    if(i%2!==0){
+        console.log('negative number: ' , i);
+    }
+
+}
